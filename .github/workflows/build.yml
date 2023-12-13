@@ -22,7 +22,7 @@ jobs:
         run: docker build .
 
       - name: Docker login
-        run: echo ${{ secrets.BOOTCAMP_PAT }} | docker login ghcr.io -u ${{ github.actor }} --password-stdin
+        run: echo ${{ secrets.BOOTCAMP_PAT }} | docker login ghcr.io -u ${{ github.actor }} -p --password-stdin
 
       - name: Push docker container
         run: |
