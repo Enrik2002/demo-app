@@ -16,6 +16,9 @@ jobs:
       - name: Create image
         run: docker build . -t ghcr.io/nexiosit/devops/enrik:${{ github.sha }}
 
+      - name: testing something
+        run: echo ghcr.io/nexiosit/devops/enrik:${{ github.sha }}
+
       - name: Docker login
         run: echo ${{ secrets.GITHUB_TOKEN }} | docker login ghcr.io -u ${{ github.actor }} --password-stdin
 
