@@ -19,7 +19,7 @@ jobs:
           node-version: 21
 
       - name: Create image
-        run: docker build ..\..\.
+        run: docker build .
 
       - name: Push docker container
         run: |
